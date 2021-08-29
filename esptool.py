@@ -441,6 +441,8 @@ class ESPLoader(object):
 
             if not wait_response:
                 return
+            if op == self.ESP_SYNC:
+                time.sleep(0.1)
 
             # tries to get a response until that response has the
             # same operation as the request or a retries limit has
